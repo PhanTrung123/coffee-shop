@@ -1,11 +1,267 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee-shop</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/home.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="left">
+      <div class="text-uppercase position-relative header-left logo">
+        <h6 class="item d-none">Coffee shop</h6>
+        <i class="fa-solid fa-store item"></i>
+        <div class="icon">
+          <i class="fa-solid fa-bars item d-none"></i>
+          <i class="fa-solid fa-hand-point-right item"></i>
+        </div>
+      </div>
+      <ul class="menu m-0 p-0">
+        <li class="d-flex gap-3 align-items-center">
+          <i class="fa-solid fa-gauge"></i>
+          <span class="text-uppercase item d-none">dashboard</span>
+        </li>
+        <li class="d-flex gap-3 align-items-center">
+          <i class="fa-solid fa-calendar-days icon-menu"></i>
+          <span class="text-uppercase item d-none">reservation</span>
+        </li>
+
+        <li class="d-flex gap-3 align-items-center">
+          <i class="fa-solid fa-utensils"></i>
+          <span class="text-uppercase item d-none">order food</span>
+        </li>
+        <li class="d-flex gap-3 align-items-center">
+          <i class="fa-solid fa-money-bill"></i>
+          <span class="text-uppercase item d-none">bills</span>
+        </li>
+        <li class="d-flex gap-3 align-items-center">
+          <i class="fa-solid fa-user"></i>
+          <span class="text-uppercase item d-none">information</span>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+      <div
+        class="border-bottom header-right border d-flex align-items-center justify-content-between px-5"
+      >
+        <div class="d-flex align-items-center gap-4">
+          <div class="d-flex gap-3">
+            <button class="border rounded-circle p-2 text-light icon-more">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button class="border rounded-circle p-2 text-light icon-more">
+              <i class="fa-solid fa-bell"></i>
+            </button>
+            <button class="border rounded-circle p-2 text-light icon-more">
+              <i class="fa-solid fa-envelope"></i>
+            </button>
+          </div>
+        </div>
+        <div class="user">
+          <button class="border rounded-circle p-2 text-light">
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <div class="bg-light d-flex flex-column p-3 user-card flex-nowrap">
+            <span><b>Username: </b>Join_doe</span>
+            <span class="pb-4"><b>Email: </b>join_doe@gmail.com</span>
+            <button class="border border-warning w-100 rounded-pill btn-logout">
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+      <main>
+        <div class="box container">Dashboard</div>
+        <div class="container p-4 box">
+          <div
+            class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3 table-cofee"
+          ></div>
+        </div>
+        <div class="container p-4 box">
+          <div
+            class="search d-flex flex-column flex-lg-row justify-content-between align-items-center g-3 gap-3"
+          >
+            <div
+              class="choose w-50 border px-3 py-2 d-flex g-2 align-items-center justify-content-between"
+            >
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-utensils"></i>
+                <select class="form-select custom-select">
+                  <option disabled selected>Choose One Table</option>
+                </select>
+              </div>
+              <div class="">
+                <button
+                  class="btn-cart px-4 py-3 rounded-pill text-light text-nowrap text-light fw-bold"
+                >
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  Order
+                </button>
+              </div>
+            </div>
+            <div class="input position-relative w-100">
+              <input
+                type="text"
+                placeholder="Search"
+                class="rounded-pill px-4 py-3 w-100 pe-5 border border-success w-100"
+              />
+              <button
+                class="search-submit text-light fw-bold rounded-pill px-4 py-3 position-absolute end-0 top-50 translate-middle-y"
+              >
+                Submit now
+              </button>
+            </div>
+            <button
+              class="add px-3 py-2 rounded-pill text-nowrap text-light fw-bold"
+              data-bs-toggle="modal" data-bs-target="#foods"
+
+            >
+              <i class="fa-solid fa-circle-plus"></i>
+              Add Food
+            </button>
+          </div>
+
+          <div
+            class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3 foods-list mt-4"
+          ></div>
+        </div>
+        <div class="box container">bills</div>
+        <div class="box container">info</div>
+      </main>
+    </div>
+    <!-- Modal booking -->
+    <div
+      class="modal fade"
+      id="booking"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal Booking <span id="bookingid" class="text-light fw-bold bg-danger px-2 rounded-circle"></span></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Customer Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="customername"
+              />
+            </div>
+             <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Quantity</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="quantity"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button id="addBooking" type="button" class="btn btn-primary">Booking</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal add foods -->
+     <div class="modal" tabindex="-1" id="foods">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal Add Foods</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+       <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Name Foods</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="foodName"
+              />
+            </div>
+             <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Prices</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="price"
+              />
+            </div>
+             <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Product Images</label
+              >
+              <input
+                type="file"
+                class="form-control "
+                id="productImg"
+              />
+              <div class="text-center">
+                <img id="imgfood" class="w-50 mt-3" src="../images/logo.png" alt="">
+              </div>
+            </div>
+          </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button id="addFoods" type="button" class="btn btn-primary">Add Foods</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/getTables.js"></script>
+    <script src="../js/getFoods.js"></script>
+    <script src="../js/configCloudinary.js"></script>
+  </body>
 </html>

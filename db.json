@@ -1,0 +1,151 @@
+{
+  "tables": [
+    {
+      "id": "1",
+      "quantity": "4",
+      "status": false,
+      "customerName": "trung"
+    },
+    {
+      "id": "2",
+      "quantity": "4",
+      "status": false,
+      "customerName": "Huy"
+    },
+    {
+      "id": "3",
+      "quantity": "4",
+      "status": true,
+      "customerName": "Trung"
+    },
+    {
+      "id": "4",
+      "quantity": "4",
+      "status": false,
+      "customerName": "Huy"
+    },
+    {
+      "id": "5",
+      "quantity": "4",
+      "status": true,
+      "customerName": "Trung"
+    },
+    {
+      "id": "6",
+      "quantity": "4",
+      "status": false,
+      "customerName": "Huy"
+    },
+    {
+      "id": "7",
+      "quantity": "4",
+      "status": true,
+      "customerName": "Trung"
+    },
+    {
+      "id": "8",
+      "quantity": "4",
+      "status": false,
+      "customerName": "Huy"
+    },
+    {
+      "id": "9",
+      "quantity": "4",
+      "status": true,
+      "customerName": "Trung"
+    },
+    {
+      "id": "10",
+      "quantity": "4",
+      "status": false,
+      "customerName": "Huy"
+    },
+    {
+      "id": "11",
+      "quantity": "4",
+      "status": true,
+      "customerName": "Trung"
+    },
+    {
+      "id": "12",
+      "quantity": "4",
+      "status": false,
+      "customerName": "Huy"
+    }
+  ],
+  "foods": [
+    {
+      "id": "1",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Espresso_Coffee_01.jpg/3840px-Espresso_Coffee_01.jpg?utm_campaign=index&utm_content=thumbnail&utm_source=commons.wikimedia.org",
+      "name": "Espresso",
+      "price": "20000 VND"
+    },
+    {
+      "id": "2",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/A_cup_of_Americano.JPG?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "name": "Americano",
+      "price": "25000 VND"
+    },
+    {
+      "id": "3",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cappuccino.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "name": "Cappuccino",
+      "price": "35000 VND"
+    },
+    {
+      "id": "4",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Latte_art.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "name": "Latte",
+      "price": "40000 VND"
+    },
+    {
+      "id": "5",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Mocha_coffee.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "name": "Mocha",
+      "price": "45000 VND"
+    },
+    {
+      "id": "6",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/1/14/Caffe_macchiato.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "name": "Macchiato",
+      "price": "35000 VND"
+    },
+    {
+      "id": "7",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Iced_Coffee_-_Flickr_-_preetamrai.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "name": "Iced Coffee",
+      "price": "25000 VND"
+    },
+    {
+      "id": "8",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Cold_brew_coffee_from_Kafi_Cafe_in_Fitzrovia_%2849905677232%29.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "name": "Cold Brew",
+      "price": "35000 VND"
+    },
+    {
+      "id": "9",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Mixue_Ice_Cream_%26_Tea_Pearl_Milk_Tea.png?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "name": "Milk Tea",
+      "price": "30000 VND"
+    },
+    {
+      "id": "10",
+      "imgUrl": "https://openclipart.org/image/400px/331955",
+      "name": "Green Tea",
+      "price": "25000 VND"
+    },
+    {
+      "id": "11",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Fruit_smoothie.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "name": "Fruit Smoothie",
+      "price": "42000 VND"
+    },
+    {
+      "id": "12",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Hot_chocolate.jpg/330px-Hot_chocolate.jpg?utm_campaign=index&utm_content=thumbnail&utm_source=commons.wikimedia.org",
+      "name": "Hot Chocolate",
+      "price": "36000 VND"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
