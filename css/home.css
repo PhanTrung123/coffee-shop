@@ -14,6 +14,7 @@ ul li {
 .box {
   display: none;
 }
+
 .left {
   background-image: linear-gradient(
     to right,
@@ -129,7 +130,12 @@ ul li {
       transform: translateY(-5px) scale(1.02);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     }
-
+    &:hover .hieuung {
+       transform: translateY(-10%) scale(1.2);
+    }
+    .hieuung {
+      transition: all 1s ease-in;
+    }
     .numbers {
       background-image: linear-gradient(
         to right,
@@ -267,6 +273,7 @@ ul li {
   main {
     height: calc(100vh - 70px);
     overflow-y: scroll;
+    background-color: #f2f4f7;
   }
 }
 
