@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-bs-theme="light">
   <head>
-    <title>Title</title>
+    <title>Coffee Shop</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -89,7 +89,114 @@
         </div>
       </div>
       <main>
-        <div class="box container">Dashboard</div>
+        <div class="box container">
+          <div class="text-center mt-5">
+            <h3 class="d-flex justify-content-center gap-2 align-items-center">
+              <i class="fa-solid fa-chart-column fw-bold"></i>Restaurant
+              Analytics Dashboard
+            </h3>
+            <p>Coffee Shop Revenue & Performance Analysis</p>
+          </div>
+          <div
+            class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3 dashboard mt-4 align-items-stretch"
+          >
+            <div class="col">
+              <div class="card p-3 border-success border-4">
+                <div
+                  class="d-flex flex-column gap-2 g-2 text-center align-content-between align-items-center"
+                >
+                  <i
+                    class="icon-dashboard fa-solid fa-chair d-flex align-items-center justify-content-center text-light p-4 bg-success"
+                  ></i>
+                  <span>Total Tables</span>
+                  <h5 class="total-table fw-bold"></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card p-3 border-primary border-4">
+                <div
+                  class="d-flex flex-column gap-2 g-2 text-center align-content-between align-items-center"
+                >
+                  <i
+                    class="icon-dashboard fa-solid fa-utensils d-flex align-items-center justify-content-center text-light p-4 bg-primary"
+                  ></i>
+                  <span>Available Tables</span>
+                  <h5 class="available-tables fw-bold"></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card p-3 border-warning border-4">
+                <div
+                  class="d-flex flex-column gap-2 g-2 text-center align-content-between align-items-center"
+                >
+                  <i
+                    class="icon-dashboard fa-solid fa-receipt d-flex align-items-center justify-content-center text-light p-4 bg-warning"
+                  ></i>
+                  <span>Unpaid Orders</span>
+                  <h5 class="unpaid-orders fw-bold">3</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card p-3 border-danger border-4">
+                <div
+                  class="d-flex flex-column gap-2 g-2 text-center align-content-between align-items-center"
+                >
+                  <i
+                    class="icon-dashboard fa-solid fa-money-bill d-flex align-items-center justify-content-center text-light p-4 bg-danger"
+                  ></i>
+                  <span>Today’s Revenue</span>
+                  <h5 class="today-revenue fw-bold">12 VND</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card p-3 h-100">
+                <div
+                  class="d-flex flex-column gap-2 g-2 text-center align-content-between align-items-center"
+                >
+                  <h5>Total Revenue</h5>
+                  <h5 class="fw-bold">12,390</h5>
+                  <span class="">VND</span>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card p-3 h-100">
+                <div
+                  class="d-flex flex-column gap-2 g-2 text-center align-content-between align-items-center"
+                >
+                  <h5>Total Orders</h5>
+                  <h5 class="fw-bold">7</h5>
+                  <span class="">Orders</span>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card p-3 h-100">
+                <div
+                  class="d-flex flex-column gap-2 g-2 text-center align-content-between align-items-center"
+                >
+                  <h5>Most Popular Drink</h5>
+                  <h5 class="fw-bold">Coffee</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card p-3 h-100">
+                <div
+                  class="d-flex flex-column gap-2 g-2 text-center align-content-between align-items-center"
+                >
+                  <h5>Frequent Customer</h5>
+                  <h5 class="fw-bold">Tom Nguyen</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="container p-4 box">
           <div
             class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3 table-cofee"
@@ -104,8 +211,8 @@
             >
               <div class="d-flex align-items-center gap-2">
                 <i class="fa-solid fa-utensils"></i>
-                <select class="form-select custom-select">
-                  <option disabled selected>Choose One Table</option>
+                <select class="form-select custom-select select-table">
+                  <option value="" disabled selected>Choose One Table</option>
                 </select>
               </div>
               <div class="">
@@ -121,18 +228,18 @@
               <input
                 type="text"
                 placeholder="Search"
-                class="rounded-pill px-4 py-3 w-100 pe-5 border border-success w-100"
+                class="search-input rounded-pill px-4 py-3 w-100 pe-5 border border-success w-100"
               />
               <button
                 class="search-submit text-light fw-bold rounded-pill px-4 py-3 position-absolute end-0 top-50 translate-middle-y"
               >
-                Submit now
+                Search
               </button>
             </div>
             <button
               class="add px-3 py-2 rounded-pill text-nowrap text-light fw-bold"
-              data-bs-toggle="modal" data-bs-target="#foods"
-
+              data-bs-toggle="modal"
+              data-bs-target="#foods"
             >
               <i class="fa-solid fa-circle-plus"></i>
               Add Food
@@ -140,10 +247,19 @@
           </div>
 
           <div
-            class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3 foods-list mt-4"
+            class=" row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3 foods-list mt-4"
           ></div>
         </div>
-        <div class="box container">bills</div>
+        <div class="box container">
+          <h3
+            class="d-flex justify-content-start gap-2 align-items-center mt-4"
+          >
+            <i class="fa-regular fa-clipboard"></i>Payment Completed
+          </h3>
+          <div class="bill-completed row row-cols-lg-2 row-cols-1 mt-2 g-3">
+            
+          </div>
+        </div>
         <div class="box container">info</div>
       </main>
     </div>
@@ -158,7 +274,13 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal Booking <span id="bookingid" class="text-light fw-bold bg-danger px-2 rounded-circle"></span></h5>
+            <h5 class="modal-title" id="exampleModalLabel">
+              Modal Booking
+              <span
+                id="bookingid"
+                class="text-light fw-bold bg-danger px-2 rounded-circle"
+              ></span>
+            </h5>
             <button
               type="button"
               class="btn-close"
@@ -171,21 +293,13 @@
               <label for="exampleFormControlInput1" class="form-label"
                 >Customer Name</label
               >
-              <input
-                type="text"
-                class="form-control"
-                id="customername"
-              />
+              <input type="text" class="form-control" id="customername" />
             </div>
-             <div class="mb-3">
+            <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label"
                 >Quantity</label
               >
-              <input
-                type="number"
-                class="form-control"
-                id="quantity"
-              />
+              <input type="number" class="form-control" id="quantity" />
             </div>
           </div>
           <div class="modal-footer">
@@ -196,81 +310,156 @@
             >
               Close
             </button>
-            <button id="addBooking" type="button" class="btn btn-primary">Booking</button>
+            <button id="addBooking" type="button" class="btn btn-primary">
+              Booking
+            </button>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Modal add foods -->
-     <div class="modal" tabindex="-1" id="foods">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 id="title" class="modal-title">Modal Add Foods</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-       <div class="modal-body">
+    <div class="modal" tabindex="-1" id="foods">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="title" class="modal-title">Modal Add Foods</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label"
                 >Name Food</label
               >
-              <input
-                type="text"
-                class="form-control"
-                id="foodName"
-              />
+              <input type="text" class="form-control" id="foodName" />
             </div>
-             <div class="mb-3">
+            <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label"
                 >Prices</label
               >
-              <input
-                type="number"
-                class="form-control"
-                id="price"
-              />
+              <input type="number" class="form-control" id="price" />
             </div>
-             <div class="mb-3">
+            <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label"
                 >Product Images</label
               >
-              <input
-                type="file"
-                class="form-control "
-                id="productImg"
-              />
+              <input type="file" class="form-control" id="productImg" />
               <div class="text-center">
-                <img id="imgfood" class="w-75 mt-3" src="../images/logo.png" alt="">
+                <img
+                  id="imgfood"
+                  class="w-75 mt-3"
+                  src="../images/logo.png"
+                  alt=""
+                />
               </div>
             </div>
           </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button  id="addFoods" type="button" class="btn btn-primary">Add Food</button>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button id="addFoods" type="button" class="btn btn-primary">
+              Add Food
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- Modal delete foods -->
- <div class="modal" tabindex="-1" id="deleteFoods">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Delete Food Item</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Are you sure you want to delete this menu item <span id="idFood" class="text-light fw-bold bg-danger px-2 rounded-circle "></span></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-danger" id="deleteFood">Delete</button>
+    <!-- Modal delete foods -->
+    <div class="modal" tabindex="-1" id="deleteFoods">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Delete Food Item</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Are you sure you want to delete this menu item
+              <span
+                id="idFood"
+                class="text-light fw-bold bg-danger px-2 rounded-circle"
+              ></span>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-danger" id="deleteFood">
+              Delete
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+
+    <!-- Modal cart -->
+    <div class="modal" tabindex="-1" id="cartFoods">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              Modal Cart
+              <span
+                id="bookingCart"
+                class="text-light fw-bold bg-danger px-2 rounded-circle"
+              ></span>
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <thead class="">
+                <tr class="text-nowrap text-center">
+                  <th scope="col">#</th>
+                  <th scope="col">Image</th>
+                  <th scope="col">Name Food</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Total Price</th>
+                </tr>
+              </thead>
+              <tbody class="list-bill text-center"></tbody>
+              
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="pay-pal btn btn-primary">PayPal</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script
@@ -280,8 +469,10 @@
     ></script>
     <script src="../js/home.js"></script>
     <script src="../js/api.js"></script>
+    <script src="../js/configCloudinary.js"></script>
+    <script src="../js/dashboard.js"></script>
     <script src="../js/getTables.js"></script>
     <script src="../js/getFoods.js"></script>
-    <script src="../js/configCloudinary.js"></script>
+    <script src="../js/paypal.js"></script>
   </body>
 </html>

@@ -2,21 +2,21 @@
   "tables": [
     {
       "id": "1",
-      "quantity": "4",
+      "quantity": "3",
       "status": false,
-      "customerName": "trung"
+      "customerName": "hung"
     },
     {
       "id": "2",
-      "quantity": "4",
-      "status": false,
-      "customerName": "Huy"
+      "quantity": "",
+      "status": true,
+      "customerName": ""
     },
     {
       "id": "3",
-      "quantity": "4",
+      "quantity": "",
       "status": true,
-      "customerName": "Trung"
+      "customerName": ""
     },
     {
       "id": "4",
@@ -26,9 +26,9 @@
     },
     {
       "id": "5",
-      "quantity": "4",
-      "status": true,
-      "customerName": "Trung"
+      "quantity": "3",
+      "status": false,
+      "customerName": "hung"
     },
     {
       "id": "6",
@@ -38,9 +38,9 @@
     },
     {
       "id": "7",
-      "quantity": "4",
-      "status": true,
-      "customerName": "Trung"
+      "quantity": "2",
+      "status": false,
+      "customerName": "trung"
     },
     {
       "id": "8",
@@ -82,63 +82,63 @@
     },
     {
       "id": "3",
-      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cappuccino.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "imgUrl": "https://res.cloudinary.com/dimz62amt/image/upload/v1778405170/tz5wienmno7xfb9xiglo.png",
       "name": "Cappuccino",
-      "price": 35000
+      "price": "35000"
     },
     {
       "id": "4",
-      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Latte_art.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "imgUrl": "https://res.cloudinary.com/dimz62amt/image/upload/v1778405260/bxdp4vzkef57swuxozrk.png",
       "name": "Latte",
-      "price": 40000
+      "price": "40000"
     },
     {
       "id": "5",
-      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Mocha_coffee.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "imgUrl": "https://res.cloudinary.com/dimz62amt/image/upload/v1778405421/mmkfbzguhefwcbdtjpj0.png",
       "name": "Mocha",
-      "price": 45000
+      "price": "45000"
     },
     {
       "id": "6",
-      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/1/14/Caffe_macchiato.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "imgUrl": "https://res.cloudinary.com/dimz62amt/image/upload/v1778405495/gtdhoulosdhzn96sdxlk.png",
       "name": "Macchiato",
-      "price": 35000
+      "price": "35000"
     },
     {
       "id": "7",
-      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Iced_Coffee_-_Flickr_-_preetamrai.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "imgUrl": "https://res.cloudinary.com/dimz62amt/image/upload/v1778405572/ez34vj6htxfd1tahm3lj.png",
       "name": "Iced Coffee",
-      "price": 2500
+      "price": "2500"
     },
     {
       "id": "8",
-      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Cold_brew_coffee_from_Kafi_Cafe_in_Fitzrovia_%2849905677232%29.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "imgUrl": "https://res.cloudinary.com/dimz62amt/image/upload/v1778405679/yarndt1r0gh5ngjcxaoz.png",
       "name": "Cold Brew",
-      "price": 35000
+      "price": "35000"
     },
     {
       "id": "9",
-      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Mixue_Ice_Cream_%26_Tea_Pearl_Milk_Tea.png?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "imgUrl": "https://res.cloudinary.com/dimz62amt/image/upload/v1778405756/macqiaklcypf1fnd8jmz.png",
       "name": "Milk Tea",
-      "price": 30000
+      "price": "30000"
     },
     {
       "id": "10",
-      "imgUrl": "https://openclipart.org/image/400px/331955",
+      "imgUrl": "https://res.cloudinary.com/dimz62amt/image/upload/v1778405822/j1euuvmi0zdd0vcvjuxo.png",
       "name": "Green Tea",
-      "price": 25000
+      "price": "25000"
     },
     {
       "id": "11",
-      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Fruit_smoothie.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "imgUrl": "https://res.cloudinary.com/dimz62amt/image/upload/v1778405904/iwfpbanbbu9nilwuk9rp.png",
       "name": "Fruit Smoothie",
-      "price": 42000
+      "price": "42000"
     },
     {
       "id": "12",
-      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Hot_chocolate.jpg/330px-Hot_chocolate.jpg?utm_campaign=index&utm_content=thumbnail&utm_source=commons.wikimedia.org",
+      "imgUrl": "https://res.cloudinary.com/dimz62amt/image/upload/v1778406063/max5usxe9dkfspfctmlf.png",
       "name": "Hot Chocolate",
-      "price": 36000
+      "price": "36000"
     },
     {
       "id": "1",
@@ -147,5 +147,84 @@
       "price": "15000"
     }
   ],
-  "$schema": "./node_modules/json-server/schema.json"
+  "orders": [
+    {
+      "id": "12",
+      "bill": [
+        {
+          "idFood": "6",
+          "quantity": "1"
+        },
+        {
+          "idFood": "7",
+          "quantity": "2"
+        }
+      ]
+    }
+  ],
+  "paypal": [
+    {
+      "idTable": "1",
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 7
+        },
+        {
+          "idFood": "2",
+          "quantity": 7
+        },
+        {
+          "idFood": "3",
+          "quantity": 7
+        }
+      ],
+      "creatAt": "2026-05-18T03:51:24.217Z",
+      "total": "525000",
+      "id": 1
+    },
+    {
+      "idTable": "2",
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": "2"
+        },
+        {
+          "idFood": "2",
+          "quantity": "1"
+        }
+      ],
+      "creatAt": "2026-03-18T03:52:47.527Z",
+      "total": "55000",
+      "id": 2
+    },
+    {
+      "idTable": "3",
+      "bill": [
+        {
+          "idFood": "10",
+          "quantity": "1"
+        },
+        {
+          "idFood": "11",
+          "quantity": "1"
+        },
+        {
+          "idFood": "12",
+          "quantity": "2"
+        }
+      ],
+      "creatAt": "2026-05-18T04:20:52.176Z",
+      "total": "139000",
+      "customerName": "hung",
+      "quantityCustomer": "4",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "trung",
+    "email": "trung123@gmail.com",
+    "password": "12345"
+  }
 }

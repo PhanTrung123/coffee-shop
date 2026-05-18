@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+ul li {
+  list-style-type: none;
+}
+.left {
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+body {
+  background-image: url(../images/icons/dinh-coffee-2000.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+
+  .container {
+
+    &.container-custom{
+      max-width: 1000px;
+      margin: auto;
+    }
+    .box {
+      border-radius: 20px;
+      .right{
+      background-color: rgba(0,0,0,0.6);
+      border-left: 1px solid white;
+      height: 100% ;
+      padding: 0;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+
+    }
+    }
+
+    .social-list {
+      .icon {
+        padding: 10px 18px;
+        border-radius: 50%;
+        border: 1px solid gray;
+      }
+    }
+
+    .text-input {
+      input {
+        padding: 15px;
+        background-color: #f0f0f0;
+        background: transparent;
+        border: 1px solid white;
+        color: white;
+      }
+    }
+    .forgot-password {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    
+  }
+}

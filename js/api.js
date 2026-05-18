@@ -8,6 +8,10 @@ const URL_USER = "http://localhost:3000/user";
 
 const URL_ORDER = "http://localhost:3000/orders";
 
+const URL_PROFILE = "http://localhost:3000/profile";
+
+const URL_PAYPAL = "http://localhost:3000/paypal";
+
 async function getAll(url) {
   try {
     const response = await fetch(url);

@@ -1,12 +1,14 @@
 async function getDataTables() {
   const data = await getAll(URL_TABLE);
-  console.log(data);
-  // kiem thung chua queryselector
-  // chay foreach
 
   const listTable = document.querySelector(".table-cofee");
 
+  const selectTable = document.querySelector(".select-table");
+
   data.forEach((list) => {
+    if (!list.status) {
+      selectTable.innerHTML += `<option value="${list.id}" >Table ${list.id}</option>`;
+    }
     const img = list.status
       ? "../images/icons/dining-room.png"
       : "../images/icons/dining-room-people.png";
@@ -16,11 +18,11 @@ async function getDataTables() {
           <i class="fa-solid fa-calendar-days icon-menu"></i>
           <span>BOOKING</span>
         </div>`
-      : `<div class="btn bg-success text-light">
+      : `<div onClick=getAddFood(${list.id}) class=" btn bg-success text-light">
           <i class="fa-solid fa-calendar-days icon-menu"></i>
           <span>ADD</span>
         </div>
-        <div class="btn bg-danger text-light">
+        <div onClick=getbtidCart(${list.id}) class="btn bg-danger text-light" data-bs-toggle="modal" data-bs-target="#cartFoods">
           <i class="fa-solid fa-cart-shopping"></i>
           <span>CART</span>
         </div>`;
@@ -49,24 +51,62 @@ async function getDataTables() {
 getDataTables();
 
 // --------------------------------
-
-const bookingBtn = document.querySelector("#addBooking")
-
-
+const bookingBtn = document.querySelector("#addBooking");
 bookingBtn.addEventListener("click", () => {
   const customerName = document.getElementById("customername");
   const quantity = document.getElementById("quantity");
-   const showID = document.getElementById("bookingid");
+  const showID = document.getElementById("bookingid");
   const newUpdate = {
-      id: showID.innerText,
-      quantity: quantity.value,
-      status: false,
-      customerName: customerName.value
-  }
+    id: showID.innerText,
+    quantity: quantity.value,
+    status: false,
+    customerName: customerName.value,
+  };
   edit(URL_TABLE, newUpdate);
 });
 
 function getbyid(id) {
-   const showID = document.getElementById("bookingid");
-   showID.innerText = id ;
+  const showID = document.getElementById("bookingid");
+  showID.innerText = id;
+}
+
+async function getbtidCart(id) {
+  const showIDCart = document.getElementById("bookingCart");
+  showIDCart.innerText = id;
+  const data = await getAll(URL_ORDER);
+  const dataFood = await getAll(URL_DISH);
+  const order = data.find((e) => e.id == id);
+  // kiem thung chua bien
+  // order.bill chay vong lap => find kiem mon an
+  const listBill = document.querySelector(".list-bill");
+  let total = 0;
+  listBill.innerHTML = "";
+  order.bill.forEach((item, index) => {
+    const food = dataFood.find((e) => e.id == item.idFood);
+     total += item.quantity * food.price ;
+    listBill.innerHTML += ` <tr class="text-nowrap">
+                  <th scope="row">${index + 1}</th>
+                  <td>
+                    <img class="w-25" src=${food.imgUrl} alt="">
+                  </td>
+                  <td>${food.name}</td>
+                  <td>${item.quantity}</td>
+                  <td class="">${item.quantity * food.price} VND</td>
+                </tr>`;
+  });
+  listBill.innerHTML += ` <tfoot>
+                   <th colspan="4">Total</th>
+                   <th  class="text-nowrap"><strong id="totalPay">${total}</strong> VND</th>
+              </tfoot>`;
+}
+
+// -----------------------------------
+function getAddFood(id) {
+  console.log(id);
+  box[1].style.display = "none";
+  box[2].style.display = "block";
+  const selectTable = document.querySelector(".select-table");
+  selectTable.value = id;
+
+
 }
