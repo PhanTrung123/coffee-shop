@@ -19,7 +19,7 @@ async function dashboard() {
       isToday(item.creatAt) ? (total += parseInt(item.total)) : total,
     0,
   );
-  todayRevenue.innerText =  `${Number(doanhthu).toLocaleString("vi-VN")} VND`;
+  todayRevenue.innerText = `${Number(doanhthu).toLocaleString("vi-VN")} VND`;
 }
 
 function isToday(dateString) {
@@ -35,3 +35,85 @@ function isToday(dateString) {
 }
 
 dashboard();
+barChar();
+async function barChar() {
+  const dataTable = await getAll(URL_TABLE);
+  const labels = dataTable.map((e) => `Table ${e.id}`);
+  const quantity = dataTable.map((e) => e.quantity);
+  const barChart = document.querySelector(".bar-chart");
+  const ctx = document.createElement("canvas");
+  barChart.appendChild(ctx);
+  const data = {
+    labels: labels,
+    datasets: [
+      {
+        label: "My First Dataset",
+        data: quantity,
+        backgroundColor: [
+          "rgba(255, 99, 132, 0.2)",
+          "rgba(255, 159, 64, 0.2)",
+          "rgba(255, 205, 86, 0.2)",
+          "rgba(75, 192, 192, 0.2)",
+          "rgba(54, 162, 235, 0.2)",
+          "rgba(153, 102, 255, 0.2)",
+          "rgba(201, 203, 207, 0.2)",
+        ],
+        borderColor: [
+          "rgb(255, 99, 132)",
+          "rgb(255, 159, 64)",
+          "rgb(255, 205, 86)",
+          "rgb(75, 192, 192)",
+          "rgb(54, 162, 235)",
+          "rgb(153, 102, 255)",
+          "rgb(201, 203, 207)",
+        ],
+        borderWidth: 1,
+      },
+    ],
+  };
+  new Chart(ctx, {
+    type: "bar",
+    data: data,
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  });
+}
+
+lineChart();
+async function lineChart() {
+  const dataPayPal = await getAll(URL_PAYPAL);
+  const lineChart = document.querySelector(".line-chart");
+  const ctx = document.createElement("canvas");
+  const thongke = {};
+   dataPayPal.sort((a,b) => a.idTable - b.idTable).forEach(element => {
+       if(thongke[element.idTable]){           
+          thongke[element.idTable] = parseInt(thongke[element.idTable]) + parseInt(element.total);
+       }else{
+         thongke[element.idTable] = element.total
+       }
+   });
+  console.log(thongke);
+  
+  lineChart.appendChild(ctx);
+  const data = {
+    labels: Object.keys(thongke).map(e => `Table ${e}`),
+    datasets: [
+      {
+        label: "My First Dataset",
+        data: Object.values(thongke).map(e => e),
+        fill: false,
+        borderColor: "rgb(75, 192, 192)",
+        tension: 0.1,
+      },
+    ],
+  };
+  new Chart(ctx, {
+      type: "line",
+    data: data,
+  });
+}

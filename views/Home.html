@@ -195,6 +195,16 @@
               </div>
             </div>
           </div>
+          <div class="row row-cols-lg-2 row-cols-1 my-4">
+            <div class="col">
+              <div class="bar-chart">
+              </div>
+            </div>
+            <div class="col">
+              <div class="line-chart"></div>
+
+            </div>
+          </div>
         </div>
 
         <div class="container p-4 box">
@@ -247,7 +257,7 @@
           </div>
 
           <div
-            class=" row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3 foods-list mt-4"
+            class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3 foods-list mt-4"
           ></div>
         </div>
         <div class="box container">
@@ -256,11 +266,78 @@
           >
             <i class="fa-regular fa-clipboard"></i>Payment Completed
           </h3>
-          <div class="bill-completed row row-cols-lg-2 row-cols-1 mt-2 g-3">
-            
+          <div
+            class="bill-completed row row-cols-lg-2 row-cols-1 mt-2 g-3"
+          ></div>
+        </div>
+        <div class="box container">
+          <div
+            class="d-flex align-items-center justify-content-center align-content-center mt-5  m-auto"
+          >
+            <div class="card">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <div
+                    class="info-left h-100 d-flex flex-column m-auto gap-2 g-2 justify-content-center  align-items-center text-light p-5"
+                  >
+                    <img
+                      src="../images/logo.png"
+                      class="img-fluid rounded-circle"
+                      alt="..."
+                      style="width: 100px; height: 100px;"
+                    />
+                    <h3>Join Doe</h3>
+                    <p>Member</p>
+                    <div class="">
+                      <button class="rounded-pill px-3 py-2 border-light bg-transparent text-light">
+                        <i class="fa-regular fa-pen-to-square"></i>Edit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body bg-dark text-light p-5">
+                    <span class="card-title">Information</span>
+                    <hr />
+                    <div class="row row-cols-lg-2 row-cols-1 w-100 g-3">
+                      <div class="col">
+                        <span>
+                          <b>Email</b><br />
+                          Join.doe@example.com
+                        </span>
+                      </div>
+                      <div class="col">
+                        <span class="text-nowrap">
+                          <b>Address</b><br />
+                          123 Main Street, New York
+                        </span>
+                      </div>
+                      <div class="col">
+                        <span>
+                          <b>Birth</b><br />
+                          1990-01-05
+                        </span>
+                      </div>
+                      <div class="col">
+                        <span>
+                          <b>Phone</b><br />
+                          012345678
+                        </span>
+                      </div>
+                    </div>
+                    <hr />
+                    <p class="card-text">Follow me</p>
+                    <div class="d-flex gap-2 g-2 align-items-center">
+                      <i class="fa-brands fa-facebook"></i>
+                      <i class="fa-brands fa-twitter"></i>
+                      <i class="fa-brands fa-instagram"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="box container">info</div>
       </main>
     </div>
     <!-- Modal booking -->
@@ -444,7 +521,6 @@
                 </tr>
               </thead>
               <tbody class="list-bill text-center"></tbody>
-              
             </table>
           </div>
           <div class="modal-footer">
@@ -455,7 +531,9 @@
             >
               Close
             </button>
-            <button type="button" class="pay-pal btn btn-primary">PayPal</button>
+            <button type="button" class="pay-pal btn btn-primary">
+              PayPal
+            </button>
           </div>
         </div>
       </div>
@@ -474,5 +552,6 @@
     <script src="../js/getTables.js"></script>
     <script src="../js/getFoods.js"></script>
     <script src="../js/paypal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </body>
 </html>

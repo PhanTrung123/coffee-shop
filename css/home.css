@@ -20,7 +20,7 @@ ul li {
   
 }
 
-.left {
+.left, .info-left {
   background-image: linear-gradient(
     to right,
     #f78ca0 0%,
@@ -28,6 +28,8 @@ ul li {
     #fd868c 60%,
     #fe9a8b 100%
   );
+
+
 
   .logo {
     background: rgba(255, 255, 255, 0.2);
